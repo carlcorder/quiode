@@ -1,4 +1,4 @@
-# 🏎️ Quiode - quickly code.
+# 🛫 Quiode - quickly code.
 
 ![demo](https://raw.githubusercontent.com/carlcorder/quiode/gh-pages/assets/quiode-demo.png)
 
