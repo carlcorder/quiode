@@ -1,2 +1,0 @@
-# quiode
-🏎️ Quiode - quickly code.
