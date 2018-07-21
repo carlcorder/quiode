@@ -8,3 +8,7 @@ A personal `Codepen` inspired by Enlight's [code editor](https://enlight.nyc/cod
 
 * CSS Grid: https://cssgrid.io
 * Ace Editor: https://ace.c9.io
+
+## Notes
+
+* `Ctrl + Enter` to compile results
