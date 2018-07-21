@@ -16,20 +16,24 @@ const JSeditor = ace.edit('js', {
     theme: 'ace/theme/monokai'
 });
 
-HTMLeditor.setValue('<!DOCTYPE html><!-- HTML -->');
+HTMLeditor.setValue(`<!DOCTYPE html>
+<!-- HTML -->`);
 CSSeditor.setValue('/* CSS */');
-JSeditor.setValue('// JS');
+JSeditor.setValue('/* JS */');
+
+const results = document.getElementById('results');
+// clears iframe HTML content on page refresh
+results.srcdoc = '';
 
 const compile = () => {
-    const code = document.getElementById('code').contentWindow.document;
-    document.body.onkeyup = () => {
-        code.open();
-        code.writeln(
-            `${HTMLeditor.getValue()}
-                <style>${CSSeditor.getValue()}</style>
-                <script>${JSeditor.getValue()}</script>`
-        );
-        code.close();
+    document.body.onkeydown = (event) => {
+        const ctrlEnter = (event.ctrlKey || event.metaKey) && (event.keyCode == 13 || event.keyCode == 10);
+        console.log(ctrlEnter);
+        if(ctrlEnter) {
+            results.srcdoc = `${HTMLeditor.getValue()}
+                    <style>${CSSeditor.getValue()}</style>
+                    <script>${JSeditor.getValue()}</script>`;
+        }
     };
 }
 

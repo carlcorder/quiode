@@ -4,7 +4,7 @@
 
 body {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     min-height: calc(100vh - 10px);
     font-family: monospace;
@@ -17,22 +17,14 @@ body {
 }
 
 iframe {
-    grid-column-start: 1;
-    grid-column-end: end;
     margin: 0.375em;
     background-color: white;
     border: 0.4em solid var(--ace-gutter-color);
 }
 
 @media only screen and (max-width: 37.5em) {
-
     body {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
     }
-
-    iframe {
-        grid-column: 1/-1;
-    }
-
 }
