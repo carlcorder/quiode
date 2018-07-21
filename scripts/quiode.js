@@ -16,8 +16,7 @@ const JSeditor = ace.edit('js', {
     theme: 'ace/theme/monokai'
 });
 
-HTMLeditor.setValue(`<!DOCTYPE html>
-<!-- HTML -->`);
+HTMLeditor.setValue('<!DOCTYPE html>');
 CSSeditor.setValue('/* CSS */');
 JSeditor.setValue('/* JS */');
 
