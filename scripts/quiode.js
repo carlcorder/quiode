@@ -27,7 +27,6 @@ results.srcdoc = '';
 const compile = () => {
     document.body.onkeydown = (event) => {
         const ctrlEnter = (event.ctrlKey || event.metaKey) && (event.keyCode == 13 || event.keyCode == 10);
-        console.log(ctrlEnter);
         if(ctrlEnter) {
             results.srcdoc = `${HTMLeditor.getValue()}
                     <style>${CSSeditor.getValue()}</style>
